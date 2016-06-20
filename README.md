@@ -6,7 +6,7 @@
 [![GitHub stars](https://img.shields.io/github/stars/SantiMA10/CampusVirtualPlus.svg)](https://github.com/SantiMA10/CampusVirtualPlus/stargazers)
 
 ### ¿Qué es CampusVirtual Plus?
-Es una extension para Google Chrome que permite ocultar asignturas, o cursos, del CampusVirtual de UniOvi.
+Es una extension para Google Chrome que permite ocultar asignaturas, o cursos, del CampusVirtual de UniOvi.
 
 ### Instalación
 * Clona el repositorio en tu ordenador.
