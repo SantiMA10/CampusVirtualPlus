@@ -9,10 +9,10 @@
 Es una extension para Google Chrome que permite ocultar asignaturas, o cursos, del CampusVirtual de UniOvi.
 
 ### Instalación
-* Clona el repositorio en tu ordenador.
+
+* Descarga la ultima [release](https://github.com/SantiMA10/CampusVirtualPlus/releases)
 * Visita la página de configuración de las extensiones, [chrome://extensions/](chrome://extensions/).
-* Activa el **modo desarrollador**.
-* Utiliza la opción **"Instalar extesiones sin empaquetar"** para añadir CampusVirtual Plus.
+* Arrastra el archivo "CampusVirtualPlus.crx".
 * Configura la extensión añadiendo el nombre de las asignaturas que quieres ocultar, lo mejor es que la copies directamente del CampusVirtual.
 
 Para desocultar borra el nombre de la asignatura y guardar los cambios.
