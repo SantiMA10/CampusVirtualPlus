@@ -6,6 +6,7 @@ var hide = function(elements){
 
     var courses = document.getElementsByClassName("coursebox clearfix");
     var my = document.getElementsByClassName("box coursebox");
+    var encuesta = document.getElementsByClassName("box generalbox");
 
     if(courses){
         for(var i = 0; i < courses.length; i++){
@@ -20,6 +21,12 @@ var hide = function(elements){
             if(elements.indexOf(normalize(my[i].childNodes[0].childNodes[0].childNodes[0].innerHTML)) != -1){
                 my[i].style["display"] = "none";
             }
+        }
+    }
+
+    if(encuesta){
+        for(var i = 0; i < encuesta.length; i++){
+            encuesta[i].style["display"] = "none";
         }
     }
 
