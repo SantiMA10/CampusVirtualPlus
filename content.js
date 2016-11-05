@@ -7,6 +7,7 @@ var hide = function(elements){
     var courses = document.getElementsByClassName("coursebox clearfix");
     var my = document.getElementsByClassName("box coursebox");
     var encuesta = document.getElementsByClassName("box generalbox");
+    var popup = document.getElementsByClassName("yui3-button");
 
     if(courses){
         for(var i = 0; i < courses.length; i++){
@@ -27,6 +28,12 @@ var hide = function(elements){
     if(encuesta){
         for(var i = 0; i < encuesta.length; i++){
             encuesta[i].style["display"] = "none";
+        }
+    }
+
+    if(popup){
+        for(var i = 0; i < popup.length; i++){
+            popup[i].click();
         }
     }
 
