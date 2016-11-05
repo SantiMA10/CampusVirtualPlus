@@ -2,7 +2,37 @@ var normalize = function(string){
     return string.replace( /[^-A-Za-z0-9]+/g, '-' ).toLowerCase();
 };
 
+var checkVersion = function(){
+
+    var xmlHttp = new XMLHttpRequest();
+    xmlHttp.open( "GET", "https://api.github.com/repos/SantiMA10/CampusVirtualPlus/tags", false ); // false for synchronous request
+    xmlHttp.send( null );
+
+    var latest = JSON.parse(xmlHttp.response)[0].name;
+
+    var current = chrome.runtime.getManifest().version;
+
+    if(latest != current){
+        var div = document.createElement("div");
+        div.style.width = "100%";
+        div.style.background = "white";
+        div.style.textAlign = "center";
+        div.textContent = "Nueva actualización disponible";
+
+        var a = document.createElement("a");
+        a.href = "https://github.com/SantiMA10/CampusVirtualPlus";
+        a.textContent = " ¡descargala!";
+
+        div.appendChild(a);
+
+        document.body.insertBefore(div, document.body.firstChild);
+    }
+
+};
+
 var hide = function(elements){
+
+    checkVersion();
 
     var courses = document.getElementsByClassName("coursebox clearfix");
     var my = document.getElementsByClassName("box coursebox");
@@ -36,6 +66,8 @@ var hide = function(elements){
             popup[i].click();
         }
     }
+
+
 
 
 

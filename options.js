@@ -1,6 +1,6 @@
 var save = function() {
 
-    var subjects = document.getElementsByClassName("subject")
+    var subjects = document.getElementsByClassName("subject");
     var subjects_names = [];
 
     for(var i = 0; i < subjects.length; i++){
@@ -18,14 +18,19 @@ var save = function() {
 
 var add = function (value) {
 
+    var p = document.createElement("p");
+    p.style.margin = "2px";
+
     var input = document.createElement("input");
     input.type = "text";
     input.className = "subject";
+
     if(typeof value == "string"){
         input.value = value;
     }
 
-    document.getElementById("subjects").appendChild(input);
+    p.appendChild(input);
+    document.getElementById("subjects").appendChild(p);
 
 };
 
@@ -37,6 +42,7 @@ var restore_options = function () {
             for(var i = 0; i < item.hide.length; i++){
 
                 add(item.hide[i]);
+
             }
         }
         else{
