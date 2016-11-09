@@ -11,8 +11,6 @@ var save = function() {
 
     chrome.storage.sync.set({
         hide : subjects_names
-    }, function() {
-        console.log("save");
     });
 };
 
